@@ -8,7 +8,10 @@ public class PlayerMov : MonoBehaviour
     
     public float runSpeed = 40f;
     float horizontalMove = 0f;
+    float horizontalNegative = 0f;
     bool salto = false;
+
+    public bool drvita = true;
     void Start()
     {
         
@@ -18,6 +21,7 @@ public class PlayerMov : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal")* runSpeed;
+        horizontalNegative = Input.GetAxisRaw("Horizontal")*-1 * runSpeed;
 
         if (Input.GetButtonDown("Jump")) {
 
@@ -27,7 +31,15 @@ public class PlayerMov : MonoBehaviour
     }
 
     void FixedUpdate(){
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, salto);
-        salto = false;
+        if (drvita == true) {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, false, salto);
+            salto = false;
+
+        }
+        else {
+            controller.Move(horizontalNegative * Time.fixedDeltaTime, false, salto);
+            salto = false;
+        }
+        
     }
 }
