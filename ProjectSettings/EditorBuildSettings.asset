@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: "Assets/Scenes/Cr\xE9ditos.unity"
+    guid: 6dde0dc38d3bc53478c9b59ea0371b05
+  - enabled: 1
+    path: Assets/Scenes/m_vita.unity
+    guid: cf0b7ad2678ce1645bf90413c28210d0
+  - enabled: 1
+    path: Assets/Scenes/m_caedes.unity
+    guid: 135690abc44ac8c4f9d5cab1d6ff3ac6
   m_configObjects: {}

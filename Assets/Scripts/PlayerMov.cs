@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMov : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class PlayerMov : MonoBehaviour
 
     public static bool muerteTiempo = false;
 
-    public bool drvita = true;
+    public bool drvita = false;
+    public bool cambio = false;
     void Start()
     {
         
@@ -32,8 +34,13 @@ public class PlayerMov : MonoBehaviour
         }
 
         if (muerteTiempo) {
+            Muerte();
             muerteTiempo = false;
         }
+
+        /*if (cambio == false) {
+
+        }*/
     }
 
     void FixedUpdate(){
@@ -48,4 +55,25 @@ public class PlayerMov : MonoBehaviour
         }
         
     }
+    
+    void Awake(){
+        InvokeRepeating("Transformacion", 0, 5);
+    }
+
+    void Transformacion() {
+        drvita = !drvita;
+    }
+
+    void Muerte() {
+
+        if (drvita) {
+            SceneManager.LoadScene("m_vita");
+        }
+        else {
+            SceneManager.LoadScene("m_caedes");
+        }
+
+    }
+
+    
 }
