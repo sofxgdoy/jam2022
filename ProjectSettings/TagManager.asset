@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Suelo
   - Teleporter
+  - Puerta
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - bg
   - Water
   - UI
-  - 
+  - limites
   - Suelo
   - Pared
   - Portal
