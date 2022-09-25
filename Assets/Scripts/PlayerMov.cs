@@ -11,6 +11,8 @@ public class PlayerMov : MonoBehaviour
     float horizontalNegative = 0f;
     bool salto = false;
 
+    public static bool muerteTiempo = false;
+
     public bool drvita = true;
     void Start()
     {
@@ -27,6 +29,10 @@ public class PlayerMov : MonoBehaviour
 
             salto = true;
 
+        }
+
+        if (muerteTiempo) {
+            muerteTiempo = false;
         }
     }
 

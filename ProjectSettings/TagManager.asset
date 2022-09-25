@@ -5,17 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
+  - Teleporter
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Suelo
+  - bg
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
+  - Suelo
+  - Pared
+  - Portal
   - Player
   - 
   - 
