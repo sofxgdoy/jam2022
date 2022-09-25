@@ -7,6 +7,9 @@ public class PlayerMov : MonoBehaviour
 {
     public CharacterController2D controller;
     
+    //Animator animator = gameObject.GetComponent<Animator>();
+    //public Animator animator;
+    
     public float runSpeed = 40f;
     float horizontalMove = 0f;
     float horizontalNegative = 0f;
@@ -16,9 +19,11 @@ public class PlayerMov : MonoBehaviour
 
     public bool drvita = false;
     public bool cambio = false;
+
+    //private shake shake;
     void Start()
     {
-        
+        //shake = GameObject.FindGameObjectsWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     // Update is called once per frame
@@ -61,7 +66,9 @@ public class PlayerMov : MonoBehaviour
     }
 
     void Transformacion() {
+        
         drvita = !drvita;
+        //animator.Play("CameraShake");
     }
 
     void Muerte() {
