@@ -98,28 +98,28 @@ public class PlayerMov : MonoBehaviour
     }
 
     void Transformacion() {
-        anim.SetTrigger("AhoraCaedes");
+        //anim.SetTrigger("AhoraCaedes");
         //anim.SetBool("Transfo", false);
         drvita = !drvita;
 
-        if (drvita == false){
+        /*if (drvita == false){
             anim.SetTrigger("AhoraVita");
-        }
+        }*/
         
 
-        /*if (drvita == true){
-            anim.SetBool("Transfo", true);
+        if (drvita == true){
+            anim.SetBool("TransVita", true);
         }
         else {
-            anim.SetBool("Transfo", false);
+            anim.SetBool("TransVita", false);
         }
 
         if (drvita == false){
-            anim.SetBool("Transfo", true);
+            anim.SetBool("TransCae", true);
         }
         else {
-            anim.SetBool("Transfo", false);
-        }*/
+            anim.SetBool("TransCae", false);
+        }
         //animator.Play("CameraShake");
     }
 
