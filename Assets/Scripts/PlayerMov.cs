@@ -46,44 +46,45 @@ public class PlayerMov : MonoBehaviour
 
     }
 
-    void FixedUpdate(){
+  void FixedUpdate(){
         if (drvita == true) {
             if (Input.GetButtonDown("Jump")) {
             salto = true;
-            anim.SetBool("Jump", true);
+            anim.SetBool("VitaJump", true);
         }
             else{
-                anim.SetBool("Jump", false);
+                anim.SetBool("VitaJump", false);
             }
 
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, salto);
             salto = false;
             
             if (horizontalMove == 0){
-                anim.SetBool("Move", false);
+                anim.SetBool("VitaRunnin", false);
             }
             else{
-                anim.SetBool("Move", true);
+                anim.SetBool("VitaRunnin", true);
             }
           
         }
         //Caede
         else {
+            Debug.Log( "CaedesJump");
             if (Input.GetButtonDown("Jump")) {
             salto = true;
-            anim.SetBool("Jump", true);
+            anim.SetBool("CaedesJump", true);
         }
             else{
-                anim.SetBool("Jump", false);
+                anim.SetBool("CaedesJump", false);
             }
             controller.Move(horizontalNegative * Time.fixedDeltaTime, false, salto);
             salto = false;
 
             if (horizontalMove == 0){
-                anim.SetBool("Move", false);
+                anim.SetBool("CaedesRunnin", false);
             }
             else{
-                anim.SetBool("Move", true);
+                anim.SetBool("CaedesRunnin", true);
             }
 
         }
@@ -93,11 +94,32 @@ public class PlayerMov : MonoBehaviour
     
     void Awake(){
         InvokeRepeating("Transformacion", 0, 5);
+        //anim.SetBool("Transfo", false);
     }
 
     void Transformacion() {
-        //set.trigger("pedos", true);
+        anim.SetTrigger("AhoraCaedes");
+        //anim.SetBool("Transfo", false);
         drvita = !drvita;
+
+        if (drvita == false){
+            anim.SetTrigger("AhoraVita");
+        }
+        
+
+        /*if (drvita == true){
+            anim.SetBool("Transfo", true);
+        }
+        else {
+            anim.SetBool("Transfo", false);
+        }
+
+        if (drvita == false){
+            anim.SetBool("Transfo", true);
+        }
+        else {
+            anim.SetBool("Transfo", false);
+        }*/
         //animator.Play("CameraShake");
     }
 

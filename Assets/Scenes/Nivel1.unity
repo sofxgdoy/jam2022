@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 300269569}
   - component: {fileID: 300269571}
   - component: {fileID: 300269570}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: platpequena2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1238,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 8020143640844766479, guid: 0e4b273003edfe041bb8c65197de0d7f, type: 3}
+  m_Sprite: {fileID: -2209767121765167827, guid: ed66e2d6ef805814f83e6c1a69e7be28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1347,7 +1347,7 @@ Animator:
   m_GameObject: {fileID: 853991549}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2871cf058b39f9240a14c4051924ed4c, type: 2}
+  m_Controller: {fileID: 9100000, guid: f298ddfff9b18624ca4341de6431b22b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2486,7 +2486,7 @@ GameObject:
   - component: {fileID: 1533748428}
   - component: {fileID: 1533748430}
   - component: {fileID: 1533748429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: platpequena2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3414,7 +3414,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a8c14ece55c8f59409f0d40001236624, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5283019, g: 0.27185312, b: 0.032395884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
