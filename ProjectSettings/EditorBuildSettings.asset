@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/m_caedes.unity
     guid: 135690abc44ac8c4f9d5cab1d6ff3ac6
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
+    guid: e499070c802029f42a5456d805290e1b
+  - enabled: 1
+    path: Assets/Scenes/Nivel3.unity
+    guid: 5066ced21266fbc4da187443606fabc3
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 2a7070cfc2ca24740a647fae015d97a9
   m_configObjects: {}

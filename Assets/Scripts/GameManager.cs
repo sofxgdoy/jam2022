@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager GameManagerInstance;
+    
 
     /*void Awake() {
         instance = GetComponent<GameManager>();
@@ -26,6 +27,20 @@ public class GameManager : MonoBehaviour
           yield return new WaitForSeconds(0.5f);
     
            SceneManager.LoadScene(sceneName);
+        }
+    }
+
+    public void CambioMuerte(string sceneName) {
+
+        if (ControlPuerta.nivel1 == false) {
+            SceneManager.LoadScene("Nivel1");
+        }
+        if (ControlPuerta.nivel1== true && ControlPuerta.nivel2 == false) {
+            SceneManager.LoadScene("Nivel2");
+        }
+
+        if(ControlPuerta.nivel1 && ControlPuerta.nivel2) {
+            SceneManager.LoadScene("Nivel3");
         }
     }
 

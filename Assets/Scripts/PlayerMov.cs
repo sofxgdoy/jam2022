@@ -37,6 +37,24 @@ public class PlayerMov : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal")* runSpeed;
         horizontalNegative = Input.GetAxisRaw("Horizontal")*-1 * runSpeed;
 
+        if (Input.GetButtonDown("Jump")) {
+            salto = true;
+            if(drvita == true){
+                anim.SetBool("VitaJump", true);
+            } else {
+            anim.SetBool("CaedesJump", true);
+            }
+        }
+        else{
+            if(drvita == true) {
+                anim.SetBool("VitaJump", false);
+            } else {
+                anim.SetBool("CaedesJump", false);
+
+            }
+            
+        }
+
 
         if (muerteTiempo) {
             Muerte();
@@ -48,13 +66,13 @@ public class PlayerMov : MonoBehaviour
 
   void FixedUpdate(){
         if (drvita == true) {
-            if (Input.GetButtonDown("Jump")) {
+            /*if (Input.GetButtonDown("Jump")) {
             salto = true;
             anim.SetBool("VitaJump", true);
         }
             else{
                 anim.SetBool("VitaJump", false);
-            }
+            }*/
 
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, salto);
             salto = false;
@@ -68,15 +86,16 @@ public class PlayerMov : MonoBehaviour
           
         }
         //Caede
-        else {
-            Debug.Log( "CaedesJump");
-            if (Input.GetButtonDown("Jump")) {
+        else{
+            
+            /*if (Input.GetButtonDown("Jump")) {
             salto = true;
             anim.SetBool("CaedesJump", true);
-        }
+            }
             else{
                 anim.SetBool("CaedesJump", false);
-            }
+            }*/
+
             controller.Move(horizontalNegative * Time.fixedDeltaTime, false, salto);
             salto = false;
 
